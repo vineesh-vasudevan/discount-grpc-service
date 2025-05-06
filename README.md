@@ -55,32 +55,30 @@ docker-compose up --build
 ### 🚀 Run Locally
 
 ```bash
-dotnet ef migrations add InitialCreate --project .\src\DiscountEngine.Infrastructure --startup-project .\src\DiscountEngine.Grpc --context DiscountDbContext --output-dir Data\Migrations
 
 dotnet run --DiscountEngine.Grpc
+
 ```
 
 💡 Note: The migration files will be created under --> src/DiscountEngine.Infrastructure/Data/Migrations
 
 ## 📦 Migrations
 
-### 🔧 Create a Migration (run from `src` directory)
-
-Navigate to the `src` folder:
+### 🔧 Create a Migration (run from project root)
 
 ```bash
-cd src
-dotnet ef migrations add InitialCreate --project .\DiscountEngine.Infrastructure --context DiscountDbContext --output-dir Data\Migrations
+
+dotnet ef migrations add InitialCreate --project .\src\DiscountEngine.Infrastructure --startup-project .\src\DiscountEngine.Grpc --context DiscountDbContext --output-dir Data\Migrations
 ```
 
-### 🚀 Apply the Migration (run from project root)
+### 🚀 Apply the Migration
 
 ```bash
 dotnet ef database update --project .\src\DiscountEngine.Infrastructure --startup-project .\src\DiscountEngine.Grpc --context DiscountDbContext
 
 ```
 
-✅ A note that running the application will auto-apply migrations
+✅ You can skip this step if you're just running the app — it will apply the latest migrations automatically.
 
 ## 📝 Logging
 
