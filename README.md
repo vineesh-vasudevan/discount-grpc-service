@@ -6,16 +6,16 @@ A lightweight, containerized Discount microservice built with .NET 8 using gRPC,
 
 ## 🚀 Features
 
-- ✅ Built with .NET 8 (LTS)
-- ✅ Clean, layered architecture (API, Application, Domain, Infrastructure)
-- ✅ gRPC services using Protocol Buffers
-- ✅ Custom interceptors for centralized exception handling and correlation ID propagation
-- ✅ EF Core with SQLite using code-first migrations
-- ✅ Health checks for service and database monitoring
-- ✅ Structured logging via Serilog
-- ✅ Functional programming style with CSharpFunctionalExtensions
-- ✅ Dockerized with Docker Compose support
-- ✅ Unit and integration tests with NUnit, FluentAssertions, and NSubstitute
+- Built with .NET 8 (LTS)
+- Clean, layered architecture (API, Application, Domain, Infrastructure)
+- gRPC services using Protocol Buffers
+- Custom interceptors for centralized exception handling and correlation ID propagation
+- EF Core with SQLite using code-first migrations
+- Health checks for service and database monitoring
+- Structured logging via Serilog
+- Functional programming style with CSharpFunctionalExtensions
+- Dockerized with Docker Compose support
+- Unit and integration tests with NUnit, FluentAssertions, and NSubstitute
 
 ---
 
