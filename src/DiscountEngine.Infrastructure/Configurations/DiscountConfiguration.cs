@@ -1,11 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
+using DiscountEngine.Domain.Entities;
 
 namespace DiscountEngine.Infrastructure.Configurations
 {
-    public class DiscountConfiguration : IEntityTypeConfiguration<Domain.Entities.Discount>
+    public class DiscountConfiguration : IEntityTypeConfiguration<Discount>
     {
-        public void Configure(EntityTypeBuilder<Domain.Entities.Discount> builder)
+        public void Configure(EntityTypeBuilder<Discount> builder)
         {
             builder.HasKey(d => d.Id);
 
@@ -25,9 +26,9 @@ namespace DiscountEngine.Infrastructure.Configurations
             builder.HasIndex(d => d.Code).IsUnique();
 
             builder.HasData(
-                new Domain.Entities.Discount { Id = -1, Code = "DISC10", ProductCode = "P1001", Amount = 10, Description = "10% off on product P1001" },
-                new Domain.Entities.Discount { Id = -2, Code = "DISC20", ProductCode = "P2002", Amount = 20, Description = "20% off on product P2002" },
-                new Domain.Entities.Discount { Id = -3, Code = "DISC30", ProductCode = "P3003", Amount = 30, Description = "30% off on product P3003" }
+                new Discount { Id = -1, Code = "DISC10", ProductCode = "P1001", Amount = 10, Description = "10% off on product P1001" },
+                new Discount { Id = -2, Code = "DISC20", ProductCode = "P2002", Amount = 20, Description = "20% off on product P2002" },
+                new Discount { Id = -3, Code = "DISC30", ProductCode = "P3003", Amount = 30, Description = "30% off on product P3003" }
             );
         }
     }

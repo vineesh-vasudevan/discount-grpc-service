@@ -1,4 +1,5 @@
-﻿using DiscountEngine.Grpc.Protos;
+﻿using DiscountEngine.Domain.Entities;
+using DiscountEngine.Grpc.Protos;
 using DiscountService.Domain.Services;
 using Grpc.Core;
 
@@ -14,7 +15,7 @@ namespace DiscountEngine.Grpc.Services
 
         public override async Task<DiscountResponse> CreateDiscount(CreateDiscountRequest request, ServerCallContext context)
         {
-            var discount = new Domain.Entities.Discount
+            var discount = new Discount
             {
                 Code = request.Code,
                 ProductCode = request.ProductCode,
@@ -28,7 +29,7 @@ namespace DiscountEngine.Grpc.Services
 
         public override async Task<DiscountResponse> UpdateDiscount(UpdateDiscountRequest request, ServerCallContext context)
         {
-            var discount = new Domain.Entities.Discount
+            var discount = new Discount
             {
                 Id = request.Id,
                 Code = request.Code,
@@ -50,7 +51,7 @@ namespace DiscountEngine.Grpc.Services
             };
         }
 
-        private static DiscountResponse CreateDiscountResponse(Domain.Entities.Discount discount)
+        private static DiscountResponse CreateDiscountResponse(Discount discount)
         {
             return new DiscountResponse
             {

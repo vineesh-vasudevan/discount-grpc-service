@@ -1,10 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using DiscountEngine.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace DiscountEngine.Infrastructure.Data
 {
     public class DiscountDbContext(DbContextOptions<DiscountDbContext> options) : DbContext(options)
     {
-        public DbSet<Domain.Entities.Discount> Discounts { get; set; } = default!;
+        public DbSet<Discount> Discounts { get; set; } = default!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

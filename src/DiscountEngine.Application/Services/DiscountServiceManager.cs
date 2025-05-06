@@ -2,12 +2,13 @@
 using DiscountService.Domain.Exceptions;
 using DiscountEngine.Domain.Repositories;
 using DiscountEngine.Domain.Exceptions;
+using DiscountEngine.Domain.Entities;
 
 namespace DiscountEngine.Application.Services
 {
     public class DiscountServiceManager(IDiscountRepository discountRepository) : IDiscountService
     {
-        public async Task<Domain.Entities.Discount> GetDiscount(string code, CancellationToken cancellationToken)
+        public async Task<Discount> GetDiscount(string code, CancellationToken cancellationToken)
         {
             var discount = await discountRepository.GetByCodeAsync(code, cancellationToken);
             if (discount.HasNoValue)
@@ -17,7 +18,7 @@ namespace DiscountEngine.Application.Services
             return discount.Value;
         }
 
-        public async Task<Domain.Entities.Discount> CreateAsync(Domain.Entities.Discount discount, CancellationToken cancellationToken)
+        public async Task<Discount> CreateAsync(Discount discount, CancellationToken cancellationToken)
         {
             var existing = await discountRepository.GetByCodeAsync(discount.Code, cancellationToken);
             if (existing.HasValue)
@@ -27,7 +28,7 @@ namespace DiscountEngine.Application.Services
             return discount;
         }
 
-        public async Task<Domain.Entities.Discount> UpdateAsync(Domain.Entities.Discount discount, CancellationToken cancellationToken)
+        public async Task<Discount> UpdateAsync(Discount discount, CancellationToken cancellationToken)
         {
             var existingDiscount = await discountRepository.GetByIdAsync(discount.Id, cancellationToken);
             if (!existingDiscount.HasValue)
