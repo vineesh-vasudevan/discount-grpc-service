@@ -64,7 +64,7 @@ dotnet run --DiscountEngine.Grpc
 
 ## 📦 Migrations
 
-### 🔧 Create a Migration (run from project root)
+### 🔧 Create a Migration
 
 ```bash
 
