@@ -1,0 +1,6 @@
+services:
+  discountengine.grpc:
+    image: ${DOCKER_REGISTRY-}discountenginegrpc
+    build:
+      context: .
+      dockerfile: src/DiscountEngine.Grpc/Dockerfile

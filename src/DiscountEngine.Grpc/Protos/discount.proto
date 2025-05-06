@@ -1,0 +1,47 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+
+option csharp_namespace = "DiscountEngine.Grpc.Protos";
+
+
+service DiscountProtoService {
+  rpc GetDiscount (GetDiscountRequest) returns (DiscountResponse);
+  rpc CreateDiscount (CreateDiscountRequest) returns (DiscountResponse);
+  rpc UpdateDiscount (UpdateDiscountRequest) returns (DiscountResponse);
+  rpc DeleteDiscount (DeleteDiscountRequest) returns (DeleteDiscountResponse);
+}
+
+message GetDiscountRequest {
+	string code = 1;
+}
+
+message DiscountResponse {
+	int32 id = 1;
+	string code = 2;
+	string productCode = 3;
+	double amount = 4;
+	string description = 5;
+}
+
+message CreateDiscountRequest {
+  string code = 1;
+  string productCode = 2;
+  double amount = 3;
+  string description = 4;
+}
+
+message UpdateDiscountRequest {
+	int32 id = 1;
+	string code = 2;
+	string productCode = 3;
+	double amount = 4;
+	string description = 5;
+}
+
+message DeleteDiscountRequest {
+  string code = 1;
+}
+
+message DeleteDiscountResponse {
+  bool success = 1;
+}
