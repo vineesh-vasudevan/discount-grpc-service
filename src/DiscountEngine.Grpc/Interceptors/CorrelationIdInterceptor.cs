@@ -33,5 +33,4 @@ namespace DiscountEngine.Grpc.Interceptors
             }
         }
     }
-
 }

@@ -7,7 +7,8 @@ using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Serilog;
 using Serilog.Events;
 using System.Text.Json;
-using static CSharpFunctionalExtensions.Result;
+
+namespace DiscountEngine.Grpc;
 
 public class Program
 {

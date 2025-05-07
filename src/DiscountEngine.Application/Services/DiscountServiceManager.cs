@@ -1,8 +1,7 @@
-﻿using DiscountService.Domain.Services;
-using DiscountService.Domain.Exceptions;
-using DiscountEngine.Domain.Repositories;
+﻿using DiscountEngine.Domain.Repositories;
 using DiscountEngine.Domain.Exceptions;
 using DiscountEngine.Domain.Entities;
+using DiscountEngine.Domain.Services;
 
 namespace DiscountEngine.Application.Services
 {

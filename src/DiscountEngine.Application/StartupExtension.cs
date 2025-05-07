@@ -1,7 +1,6 @@
 ﻿using DiscountEngine.Application.Services;
-using DiscountService.Domain.Services;
+using DiscountEngine.Domain.Services;
 using Microsoft.Extensions.DependencyInjection;
-
 
 namespace DiscountEngine.Application
 {

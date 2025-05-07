@@ -1,6 +1,6 @@
 ﻿using DiscountEngine.Domain.Entities;
 
-namespace DiscountService.Domain.Services
+namespace DiscountEngine.Domain.Services
 {
     public interface IDiscountService
     {

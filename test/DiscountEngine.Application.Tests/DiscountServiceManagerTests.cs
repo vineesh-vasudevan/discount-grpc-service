@@ -3,7 +3,6 @@ using DiscountEngine.Application.Services;
 using DiscountEngine.Domain.Entities;
 using DiscountEngine.Domain.Exceptions;
 using DiscountEngine.Domain.Repositories;
-using DiscountService.Domain.Exceptions;
 using FluentAssertions;
 using NSubstitute;
 

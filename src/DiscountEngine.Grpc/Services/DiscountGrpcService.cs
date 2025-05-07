@@ -1,6 +1,6 @@
 ﻿using DiscountEngine.Domain.Entities;
+using DiscountEngine.Domain.Services;
 using DiscountEngine.Grpc.Protos;
-using DiscountService.Domain.Services;
 using Grpc.Core;
 
 namespace DiscountEngine.Grpc.Services

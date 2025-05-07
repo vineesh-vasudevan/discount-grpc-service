@@ -1,10 +1,7 @@
-﻿using DiscountEngine.Domain.Exceptions;
-
-namespace DiscountService.Domain.Exceptions
+﻿namespace DiscountEngine.Domain.Exceptions
 {
-    public class DiscountAlreadyExistsException : ConflictException
+    public class DiscountAlreadyExistsException(string code)
+        : ConflictException($"A discount with code '{code}' already exists.")
     {
-        public DiscountAlreadyExistsException(string code)
-            : base($"A discount with code '{code}' already exists.") { }
     }
 }
